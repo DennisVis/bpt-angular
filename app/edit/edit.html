@@ -1,0 +1,39 @@
+<h1>{{ctrl.question.name}}</h1>
+
+<label>
+  Name:
+  <input type="text" ng-model="ctrl.question.name">
+</label>
+
+<h2>Labels</h2>
+
+<ul>
+  <li ng-repeat="(lang, value) in ctrl.question.labels">
+    <label>
+      Language:
+      <input type="text" ng-model="lang">
+    </label>
+    <label>
+      Value:
+      <input type="text" ng-model="value">
+    </label>
+    <button ng-click="ctrl.removeLabel(lang)">X</button>
+  </li>
+</ul>
+
+<h2>New label</h2>
+
+<label>
+  Language:
+  <input type="text" ng-model="ctrl.newLanguage">
+</label>
+<label>
+  Value:
+  <input type="text" ng-model="ctrl.newValue">
+</label>
+<button ng-click="ctrl.addLabel()">Add label</button>
+<br>
+<br>
+
+<a href="#/{{ctrl.question.id}}">Cancel</a>
+<button ng-click="ctrl.save()">Save</button>

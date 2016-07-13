@@ -1,0 +1,9 @@
+<h1>Questions</h1>
+
+<div ng-repeat="question in ctrl.questions | orderBy: 'id'">
+  <h2>
+    <a href="#/{{question.id}}">{{question.name}}</a>
+  </h2>
+</div>
+
+<a href="#/new/edit">New</a>
